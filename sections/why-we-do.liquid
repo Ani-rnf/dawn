@@ -1,0 +1,55 @@
+<div class="why_do_wrapper">
+  <div class="page-width">
+      <div class="why_heading">
+          <h3>{{ section.settings.title }}</h3>
+          <p>{{ section.settings.content }}</p>
+          <a href="https://ecoalition.com/pages/why-the-rainforest" class="custom_btn_blue">Read More</a>
+      </div>
+      <div class="why_do_image_section">
+          {% if section.settings.custom_video %}
+            <video controls>
+              <source src="{{ section.settings.custom_video }}" type="video/mp4">
+            </video>
+          {% endif %}
+          
+          {% if section.settings.main_img %}
+            <img src="{{ section.settings.main_img | image_url }}">
+          {% endif %}
+      </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Why we do",
+    "settings": [
+       {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Why We Do It?"    
+        },
+        {
+          "type": "textarea",
+          "id": "content",          
+          "label": "Why we do it Cotent",
+          "default": "When you select one of our eco-friendly bracelets, you’re doing more than letting your friends and family know you support the planet’s health. You’re setting in motion a series of actions that starts with using recycled materials to keep debris out of our oceans, then planting trees in deforested areas and caring for them so they reach maturity. The end result is a tree that delivers oxygen, absorbs harmful emissions and helps sustain the planet."   
+        },
+        {
+          "type": "text",
+          "id": "custom_video",
+          "label": "Video Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_img",
+          "label": "Image"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Why we do"
+      }
+    ]
+  }
+{% endschema %}

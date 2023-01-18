@@ -1,0 +1,118 @@
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.newsletter-signup-wrapper .newsletter__wrapper {
+    background: transparent;
+      padding: 0;
+}
+.newsletter-signup-wrapper .newsletter-form__field-wrapper .field__label {
+  line-height: 36px;
+}
+.newsletter-signup-wrapper .newsletter-form__field-wrapper .field {
+    z-index: 0;
+    padding: 5px;
+}
+.newsletter-signup-wrapper #Subscribe {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #1a9bf9;
+    height: initial!important;
+    line-height: 1!important;
+    opacity: 1;
+    padding: 6px 33px!important;
+    border: none;
+    text-decoration: none;
+    transition: .5s linear;
+    -webkit-transition: .5s linear;
+    position: static;
+    width: 300px;
+}
+.newsletter-signup-wrapper .newsletter__wrapper .newsletter-form__field-wrapper {
+    max-width: inherit;
+    display: flex;
+}
+.newsletter-signup-wrapper .newsletter-form__field-wrapper .field__input:focus~.field__label {
+    line-height: normal;
+    top: 10px;  
+    left: 25px;
+}
+.newsletter-signup-wrapper .newsletter-form__field-wrapper .field__input:not(:placeholder-shown)~.field__label {
+    line-height: 20px;
+    left: 25px;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter-form {
+    align-items: flex-start;
+    margin: 20px auto 0px;
+    max-width: 76rem;
+  }
+}
+
+.newsletter-form__field-wrapper {
+  width: 100%;
+}
+
+.newsletter-form__field-wrapper .field__input {
+  padding-right: 5rem;
+}
+
+.newsletter-form__field-wrapper .field {
+  z-index: 0;
+}
+
+.newsletter-form__message {
+  justify-content: center;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.newsletter-form__message--success {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter-form__message {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 767px) {
+.newsletter-signup-wrapper .newsletter__wrapper .newsletter-form__field-wrapper {
+    flex-wrap: wrap;
+}
+}
+
+.newsletter-form__button {
+  width: 4.4rem;
+  margin: 0;
+  right: var(--inputs-border-width);
+  top: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.newsletter-form__button:focus-visible {
+  box-shadow: 0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground));
+  background-color: rgb(var(--color-background));
+}
+
+.newsletter-form__button:focus {
+  box-shadow: 0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground));
+  background-color: rgb(var(--color-background));
+}
+
+.newsletter-form__button:not(:focus-visible):not(.focused) {
+  box-shadow: inherit;
+  background-color: inherit;
+}
+
+.newsletter-form__button .icon {
+  width: 1.5rem;
+}

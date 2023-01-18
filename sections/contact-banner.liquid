@@ -1,0 +1,62 @@
+{% if section.settings.second_layout %}
+<section class="contact-form-banner second-layout" style=" background-image: url('https://cdn.shopify.com/s/files/1/0652/7909/9130/files/ECOalition_Site_Background_Image-3500x1980-Movement-min.jpg?v=1672323860');">
+  <div class="contact-banner-wrapper">
+    <div class="page-width">
+      <div class="contact-banner-inner">
+        <h2>What is the Ecoalition Movement?</h2>
+        <div class="contact_form_subheading">
+          <p>When you select one of our eco-friendly bracelets, you’re helping to keep our seas clean, and ensuring a tree will be planted and cared for in the most deforested regions of Brazil with the end result of protecting the Amazon rainforest. You’re also opening the door to something larger: helping tip the scales back in favor of life itself.</p>
+        </div>
+        <div class="contact-form-button-wrap">
+          <a href="#" class="custom_btn_blue">CTA Button</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="contact-form-banner" style=" background-image: url('https://cdn.shopify.com/s/files/1/0652/7909/9130/files/contact-banner.jpg?v=1672323088');">
+  <div class="contact-banner-wrapper">
+    <div class="page-width">
+      <div class="contact-banner-inner">
+        <h2>We'd LOVE to <br/> hear from YOU!</h2>
+        
+        <div class="contact_form_subheading">
+          <h5>There are several ways we can connect.</h5>
+          <p>Choose the one below that's right for you or you can fill out the form below.</p>
+        </div>
+        <div class="contact-form-button-wrap">
+          <a href="#" class="custom_btn_blue">SEND AN EMAIL</a>
+          <a href="#" class="custom_btn_blue">JOIN EMAIL LIST</a>
+          <a href="#" class="custom_btn_blue">CUSTOMER SERVICE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Contact banner",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "second_layout",
+        "label": "Second layout",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Contact page banner"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
